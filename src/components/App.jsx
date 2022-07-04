@@ -3,6 +3,7 @@ import { Box } from './Box';
 import { ContactForm } from './Phonebook/Phonebook';
 import { Contacts } from './Contacts/Contacts';
 import { Filter } from './Filter/Filter';
+import { background } from 'styled-system';
 
 export class App extends Component {
   state = {
@@ -53,10 +54,14 @@ export class App extends Component {
       <Box
         mt={4}
         mx={'auto'}
+        px={4}
+        py={5}
         display={'flex'}
         flexDirection="column"
         alignItems="center"
         width={3}
+        borderRadius={'large'}
+        bg={'secondary'}
       >
         <h1>PhoneBook</h1>
         <ContactForm onAddContact={this.addContact}></ContactForm>

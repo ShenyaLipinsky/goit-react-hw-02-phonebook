@@ -1,6 +1,7 @@
 import propTypes from 'prop-types';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
+import { FilterLabel, FilterInput, FilterForm } from './Filter.styled';
 
 const ErrorText = styled.p`
   color: #6b1414;
@@ -17,19 +18,18 @@ const FormError = ({ name }) => {
 export const Filter = ({ title, value, filterText }) => {
   return (
     <Formik>
-      <Form autoComplete="off">
-        <p>{title}</p>
-        <label htmlFor="filter"></label>
-        <div>
-          <Field
+      <FilterForm autoComplete="off">
+        <FilterLabel htmlFor="filter">
+          {title}
+          <FilterInput
             type="text"
             name="filter"
             value={value}
             onChange={filterText}
           />
-          <FormError name="filter"></FormError>
-        </div>
-      </Form>
+        </FilterLabel>
+        <FormError name="filter"></FormError>
+      </FilterForm>
     </Formik>
   );
 };

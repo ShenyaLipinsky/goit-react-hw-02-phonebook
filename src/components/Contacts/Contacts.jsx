@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import { Box } from '../Box';
-import { ContactItem } from '../Contacts/Contacts.styled';
+import { ContactItem, ContactBtn } from '../Contacts/Contacts.styled';
 
 export const Contacts = ({ contacts, onRemoveContact }) => {
   return (
@@ -10,9 +10,9 @@ export const Contacts = ({ contacts, onRemoveContact }) => {
           <ContactItem key={id}>
             <p>{name}:</p>
             <p>{number}</p>
-            <button id={id} onClick={() => onRemoveContact(id)}>
+            <ContactBtn id={id} onClick={() => onRemoveContact(id)}>
               Delete
-            </button>
+            </ContactBtn>
           </ContactItem>
         );
       })}

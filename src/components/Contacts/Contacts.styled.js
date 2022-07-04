@@ -3,21 +3,26 @@ export const ContactItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: ${p => `${p.theme.space[3]}px`};
-  /* padding: ${p => `${p.theme.space[1]}px`} 0;
-  :last-child {
-    margin-right: 0;
-  }
-
-  text-align: center;
-  font-size: ${p => p.theme.fontSizes.m};
-  color: ${p => p.theme.colors.text};
-  background-color: ${p => p.theme.colors.secondary};
+  margin-top: ${p => `${p.theme.space[4]}px`};
+  padding: ${p => `${p.theme.space[3]}px`};
+  background-color: ${p => p.theme.colors.primary};
   :hover {
     background-color: ${p => p.theme.colors.accent};
   }
-  width: 80px;
-  height: 30px;
   border-radius: ${p => p.theme.radii.large};
-  cursor: pointer; */
+  color: ${p => p.theme.colors.text};
+  font-size: ${p => p.theme.fontSizes.m};
+  box-shadow: ${p => p.theme.shadows.darkBox};
+`;
+export const ContactBtn = styled.button`
+  padding: ${p => `${p.theme.space[2]}px`};
+
+  background-color: ${p => p.theme.colors.primary};
+  :hover {
+    background-color: ${p => p.theme.colors.red};
+  }
+  border: ${p => p.theme.borders.normal};
+  border-radius: ${p => p.theme.radii.large};
+  color: ${p => p.theme.colors.text};
+  font-size: ${p => p.theme.fontSizes.m};
 `;
