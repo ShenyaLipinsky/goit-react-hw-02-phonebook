@@ -3,7 +3,6 @@ import { Box } from './Box';
 import { ContactForm } from './Phonebook/Phonebook';
 import { Contacts } from './Contacts/Contacts';
 import { Filter } from './Filter/Filter';
-import { background } from 'styled-system';
 
 export class App extends Component {
   state = {
