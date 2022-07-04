@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {  Form, Field } from 'formik';
 
 export const FilterLabel = styled.label`
   display: flex;
