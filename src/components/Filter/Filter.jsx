@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 import { FilterLabel, FilterInput, FilterForm } from './Filter.styled';
 
