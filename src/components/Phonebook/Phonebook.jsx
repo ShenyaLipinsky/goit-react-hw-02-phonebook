@@ -1,9 +1,15 @@
 import propTypes from 'prop-types';
 // import { Box } from '../Box';
 import * as yup from 'yup';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
+import {
+  PhonebookForm,
+  PhonebookLabel,
+  PhonebookInput,
+  ErrorText,
+  PhonebookBtn,
+} from './Phonebook.styled';
 import { nanoid } from 'nanoid';
-import styled from 'styled-components';
 
 const initialValues = {
   name: '',
@@ -28,9 +34,6 @@ const schema = yup.object().shape({
     .max(13, 'Too long number')
     .required('*This area is required'),
 });
-const ErrorText = styled.p`
-  color: #6b1414;
-`;
 
 const FormError = ({ name }) => {
   return (
@@ -54,19 +57,19 @@ export const ContactForm = ({ onAddContact }) => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
-      <Form autoComplete="off">
-        <label htmlFor="name">Name:</label>
-        <div>
-          <Field type="text" name="name" />
+      <PhonebookForm autoComplete="off">
+        <PhonebookLabel htmlFor="name">
+          Name:
+          <PhonebookInput type="text" name="name" />
           <FormError name="name"></FormError>
-        </div>
-        <label htmlFor="number">Phone:</label>
-        <div>
-          <Field type="tel" name="number" />
+        </PhonebookLabel>
+        <PhonebookLabel htmlFor="number">
+          Phone:
+          <PhonebookInput type="tel" name="number" />
           <FormError name="number"></FormError>
-        </div>
-        <button type="submit">Add Contact</button>
-      </Form>
+        </PhonebookLabel>
+        <PhonebookBtn type="submit">Add Contact</PhonebookBtn>
+      </PhonebookForm>
     </Formik>
   );
 };

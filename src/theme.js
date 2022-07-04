@@ -3,6 +3,7 @@ export const theme = {
     black: '#000',
     white: '#fff',
     red: '#ee9797',
+    error: '#ff0000',
     green: '#008000',
     text: '#2a2a2a',
     secondaryText: '#8b8b8b',
@@ -30,6 +31,7 @@ export const theme = {
   },
   fontWeights: {
     normal: 400,
+    medium: 500,
     bold: 700,
   },
   lineHeights: {
