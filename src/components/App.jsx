@@ -15,6 +15,10 @@ export class App extends Component {
     filter: '',
   };
 
+  filterSubmit = e => {
+    e.preventDefault();
+  };
+
   handleChange = evt => {
     this.setState({ filter: evt.target.value });
   };
@@ -69,6 +73,7 @@ export class App extends Component {
           title="Find contacts by name"
           value={filter}
           filterText={this.handleChange}
+          onFilterSubmit={this.filterSubmit}
         />
         <Contacts
           contacts={this.filterItems(this.state.contacts, filter)}

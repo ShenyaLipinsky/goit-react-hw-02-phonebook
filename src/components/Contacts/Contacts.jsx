@@ -1,19 +1,19 @@
 import propTypes from 'prop-types';
 import { Box } from '../Box';
-import { ContactItem, ContactBtn } from '../Contacts/Contacts.styled';
+import { ContactListItem } from './ContactsItem';
 
 export const Contacts = ({ contacts, onRemoveContact }) => {
   return (
     <Box as="ul" mt={4} width="100%">
       {contacts.map(({ id, name, number }) => {
         return (
-          <ContactItem key={id}>
-            <p>{name}:</p>
-            <p>{number}</p>
-            <ContactBtn id={id} onClick={() => onRemoveContact(id)}>
-              Delete
-            </ContactBtn>
-          </ContactItem>
+          <ContactListItem
+            key={id}
+            id={id}
+            name={name}
+            number={number}
+            onClick={onRemoveContact}
+          />
         );
       })}
     </Box>
