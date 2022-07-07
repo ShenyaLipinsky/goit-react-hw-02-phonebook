@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Form, Field } from 'formik';
+// import { Form, Field } from 'formik';
 
-export const PhonebookForm = styled(Form)`
+export const PhonebookForm = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ export const PhonebookLabel = styled.label`
   margin-top: ${p => `${p.theme.space[3]}px`};
   font-size: ${p => p.theme.fontSizes.l};
 `;
-export const PhonebookInput = styled(Field)`
+export const PhonebookInput = styled.input`
   width: 100%;
   margin-top: ${p => `${p.theme.space[3]}px`};
   padding: ${p => `${p.theme.space[3]}px`};

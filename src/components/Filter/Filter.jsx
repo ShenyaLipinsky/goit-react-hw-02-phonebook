@@ -1,10 +1,10 @@
 import propTypes from 'prop-types';
 import { FilterLabel, FilterInput, FilterForm } from './Filter.styled';
 
-export const Filter = ({ title, value, filterText, onFilterSubmit }) => {
+export const Filter = ({ title, value, filterText }) => {
   return (
     <>
-      <FilterForm autoComplete="off" onSubmit={onFilterSubmit}>
+      <FilterForm autoComplete="off">
         <FilterLabel htmlFor="filter">
           {title}
           <FilterInput
